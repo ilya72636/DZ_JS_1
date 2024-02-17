@@ -58,17 +58,60 @@ usersArray.forEach(user => {
 
 //4
 
-function isPalindrome(inputStr) {
+// function isPalindrome(inputStr) {
 
-    const cleanedStr = inputStr.toLowerCase().replace(/[^a-z0-9]/g, '')
-    return cleanedStr === cleanedStr.split('').reverse().join('')
+//     const cleanedStr = inputStr.toLowerCase().replace(/[^a-z0-9]/g, '')
+//     return cleanedStr === cleanedStr.split('').reverse().join('')
+// }
+
+// const inputString = "A man, a plan, a canal, Panama"
+// const results = isPalindrome(inputString)
+
+// if (results) {
+//     console.log(`"${inputString}" - это палиндром!`)
+// } else {
+//     console.log(`"${inputString}" - это не палиндром.`)
+// }
+
+function isPalindrome(inputStr) {
+    let lowerCaseStr = ''
+    for (let i = 0; i < inputStr.length; i++) {
+        const char = inputStr[i]
+        if (char >= 'A' && char <= 'Z') {
+            lowerCaseStr += String.fromCharCode(char.charCodeAt(0) + 32)
+        } else {
+            lowerCaseStr += char
+        }
+    }
+    let cleanedStr = ''
+    for (let i = 0; i < lowerCaseStr.length; i++) {
+        const char = lowerCaseStr[i]
+        if ((char >= 'a' && char <= 'z') || (char >= '0' && char <= '9')) {
+            cleanedStr += char
+        }
+    }
+
+    let reversedStr = ''
+    for (let i = cleanedStr.length - 1; i >= 0; i--) {
+        reversedStr += cleanedStr[i]
+    }
+
+    let isPalindromic = true;
+    for (let i = 0; i < cleanedStr.length; i++) {
+        if (cleanedStr[i] !== reversedStr[i]) {
+            isPalindromic = false;
+            break;
+        }
+    }
+
+    return isPalindromic;
 }
 
-const inputString = "A man, a plan, a canal, Panama"
-const results = isPalindrome(inputString)
+const inputString = "A man, a plan, a canal, Panama";
+const results = isPalindrome(inputString);
 
 if (results) {
-    console.log(`"${inputString}" - это палиндром!`)
+    console.log(`Строка "${inputString}" - это палиндром!`);
 } else {
-    console.log(`"${inputString}" - это не палиндром.`)
+    console.log(`Строка "${inputString}" - это не палиндром.`);
 }
