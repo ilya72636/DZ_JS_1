@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riddles</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        body>.a{
+            display: flex;
+            gap: 15px;
+            flex-direction: column;
+        }
+        .riddle {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .toggle-answer {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .toggle-answer:hover {
+            background-color: #2980b9;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+    <div class="riddle">
+        <p>Загадка 1: Какого цвета утка?</p>
+        <button class="toggle-answer">Показать ответ</button>
+        <p class="answer">Ответ: оранжевого цвета.</p>
+    </div>
+
+    <div class="riddle">
+        <p>Загадка 2: Что идет, но не ходит?</p>
+        <button class="toggle-answer">Показать ответ</button>
+        <p class="answer">Ответ: время.</p>
+    </div>
+
+        <div class="riddle">
+            <p>Загадка 3: Что имеет ключ, но не открывает ничего?</p>
+            <button class="toggle-answer">Показать ответ</button>
+            <p class="answer">Ответ: пианино.</p>
+        </div>
+
+        <div class="riddle">
+            <p>Загадка 4: Что можно увидеть с закрытыми глазами?</p>
+            <button class="toggle-answer">Показать ответ</button>
+            <p class="answer">Ответ: сон.</p>
+        </div>
+
+        <div class="riddle">
+            <p>Загадка 5: Что всегда идет, но никогда не приходит?</p>
+            <button class="toggle-answer">Показать ответ</button>
+            <p class="answer">Ответ: завтра.</p>
+        </div>
+
+        <div class="riddle">
+            <p>Загадка 6: Что имеет глаза, но не видит?</p>
+            <button class="toggle-answer">Показать ответ</button>
+            <p class="answer">Ответ: игла.</p>
+        </div>
+
+        <div class="riddle">
+            <p>Загадка 7: Какой урок дает дерево?</p>
+            <button class="toggle-answer">Показать ответ</button>
+            <p class="answer">Ответ: уроки.</p>
+        </div>
+
+        <div class="riddle">
+            <p>Загадка 8: Что не имеет длины, ширины, веса и объема, но человек может измерять его?</p>
+            <button class="toggle-answer">Показать ответ</button>
+            <p class="answer">Ответ: время.</p>
+        </div>
+    </div>
+
+    
+</body>
+<script src="app.js"></script>
+</html>
