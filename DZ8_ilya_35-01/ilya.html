@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="ilya.css">
+  <title>Таблица фильмов</title>
+</head>
+<body>
+
+  <table id="filmsTable">
+    <thead>
+      <tr>
+        <th>Название</th>
+        <th>Год</th>
+        <th>Рейтинг</th>
+        <th>Режиссер</th>
+        <th>Действие</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Побег из Шоушенка</td>
+        <td>1994</td>
+        <td>9.3</td>
+        <td>Фрэнк Дарабонт</td>
+        <td><button onclick="buyTicket(this)">Купить</button></td>
+      </tr>
+      <tr>
+        <td>Форрест Гамп</td>
+        <td>1994</td>
+        <td>8.8</td>
+        <td>Роберт Земекис</td>
+        <td><button onclick="buyTicket(this)">Купить</button></td>
+      </tr>
+      <tr>
+        <td>Темный рыцарь</td>
+        <td>2008</td>
+        <td>9.0</td>
+        <td>Кристофер Нолан</td>
+        <td><button onclick="buyTicket(this)">Купить</button></td>
+      </tr>
+      <tr>
+        <td>Зеленая миля</td>
+        <td>1999</td>
+        <td>8.6</td>
+        <td>Фрэнк Дарабонт</td>
+        <td><button onclick="buyTicket(this)">Купить</button></td>
+      </tr>
+      <tr>
+        <td>Интерстеллар</td>
+        <td>2014</td>
+        <td>8.6</td>
+        <td>Кристофер Нолан</td>
+        <td><button onclick="buyTicket(this)">Купить</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div id="confirmationModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <p>Подтверждение</p>
+      <button onclick="confirmPurchase()">OK</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
